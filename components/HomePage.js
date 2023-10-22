@@ -1,22 +1,25 @@
 import React, {useState, useEffect} from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 // import registerNNPushToken from 'native-notify'
 
+import { Link } from 'react-router-dom';
+import FitnessForm from './FitnessForm';
+
 export default function HomePage({}) {
-    return(
-        <View style={styles.container}>
-        <Text>In HomePage Component</Text>
-        <StatusBar style="auto" />
+
+  return(
+      <View style={{
+        alignItems: 'center',
+        marginTop: 100,
+        padding: 20
+      }}>
+        <Text>Home Page Component</Text>
+        {/* <Pressable onPress={callFitnessForm} style={({pressed}) => [
+          styles.itemBox, pressed && { opacity: 0.8 }
+        ]}>
+          <Text style= {[styles.itemText]}>PRESS ME!</Text>
+        </Pressable>
+        {flag && <FitnessForm></FitnessForm>} */}
       </View>
-    );
-  }
-  
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-  });
+  );
+}
